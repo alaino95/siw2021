@@ -24,7 +24,6 @@ public class VisualizzaProfiloPublisher extends HttpServlet {
 
 		for (Ebook e : Ebook) {
 			if (e.getPublisher().getUsername().equals(p.getUsername())) {
-				System.out.println(e.getPublisher().getUsername());
 				daVisualizzare.add(e);
 			}
 		}
