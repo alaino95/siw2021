@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+<servlet>
+  	<servlet-name>Login</servlet-name>
+  	<servlet-class>controller.Login</servlet-class>
+</servlet>
+<servlet-mapping>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/login</url-pattern>
+</servlet-mapping>
+  
+<servlet>
+  	<servlet-name>home</servlet-name>
+  	<servlet-class>controller.Home</servlet-class>
+</servlet>
+<servlet-mapping>
+  	<servlet-name>home</servlet-name>
+  	<url-pattern></url-pattern>
+</servlet-mapping>
+  
+<servlet>
+  	<servlet-name>IscrizioneUtente</servlet-name>
+  	<servlet-class>controller.IscriviUtente</servlet-class>
+</servlet>
+<servlet-mapping>
+  	<servlet-name>IscrizioneUtente</servlet-name>
+  	<url-pattern>/inviaDatiUtente</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  	<servlet-name>profilo</servlet-name>
+  	<servlet-class>controller.VisualizzaProfiloPublisher</servlet-class>
+</servlet>
+<servlet-mapping>
+  	<servlet-name>profilo</servlet-name>
+  	<url-pattern>/profilo</url-pattern>
+</servlet-mapping>  
+
+<servlet>
+  	<servlet-name>caricamento</servlet-name>
+  	<servlet-class>controller.Caricamento</servlet-class>
+</servlet>  
+<servlet-mapping>
+  	<servlet-name>caricamento</servlet-name>
+  	<url-pattern>/carica</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  	<servlet-name>eliminaEbook</servlet-name>
+  	<servlet-class>controller.EliminaEbook</servlet-class>
+</servlet>  
+<servlet-mapping>
+  	<servlet-name>eliminaEbook</servlet-name>
+  	<url-pattern>/eliminaEbook</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  	<servlet-name>pagamento</servlet-name>
+  	<servlet-class>controller.Pagamento</servlet-class>
+</servlet>  
+<servlet-mapping>
+  	<servlet-name>pagamento</servlet-name>
+  	<url-pattern>/pagamento</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  	<servlet-name>aggiorna</servlet-name>
+  	<servlet-class>controller.AggiornaCrediti</servlet-class>
+</servlet> 
+<servlet-mapping>
+  	<servlet-name>aggiorna</servlet-name>
+  	<url-pattern>/aggiorna</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  	<servlet-name>trasferisci</servlet-name>
+  	<servlet-class>controller.DownloadToPayment</servlet-class>
+</servlet>  
+<servlet-mapping>
+  	<servlet-name>trasferisci</servlet-name>
+  	<url-pattern>/trasferisci</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  	<servlet-name>elencoGeneri</servlet-name>
+  	<servlet-class>controller.DammiGeneri</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>elencoGeneri</servlet-name>
+  	<url-pattern>/elencoGeneri</url-pattern>
+ </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>caseEditrici</servlet-name>
+  	<servlet-class>controller.DammiCaseEditrici</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>caseEditrici</servlet-name>
+  	<url-pattern>/elencoCaseEditrici</url-pattern>
+  </servlet-mapping>
+
+<servlet>
+  	<servlet-name>elencoEbook</servlet-name>
+  	<servlet-class>controller.DammiEbook</servlet-class>
+ </servlet> 
+<servlet-mapping>
+  	<servlet-name>elencoEbook</servlet-name>
+  	<url-pattern>/ebook</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  	<servlet-name>ricercaPerNome</servlet-name>
+  	<servlet-class>controller.DammiEbookPerNome</servlet-class>
+</servlet>
+  
+<servlet-mapping>
+  	<servlet-name>ricercaPerNome</servlet-name>
+  	<url-pattern>/ricercaNome</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  	<servlet-name>elencoRecensioni</servlet-name>
+  	<servlet-class>controller.DammiRecensioni</servlet-class>
+</servlet>  
+<servlet-mapping>
+  	<servlet-name>elencoRecensioni</servlet-name>
+  	<url-pattern>/elencoRecensioni</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  	<servlet-name>pagacrediti</servlet-name>
+  	<servlet-class>controller.PagaCrediti</servlet-class>
+</servlet>
+<servlet-mapping>
+  	<servlet-name>pagacrediti</servlet-name>
+  	<url-pattern>/pagacrediti</url-pattern>
+</servlet-mapping>
+  
+ <servlet>
+  	<servlet-name>salvaRecensioni</servlet-name>
+  	<servlet-class>controller.SalvaRecensione</servlet-class>
+</servlet>  
+<servlet-mapping>
+  	<servlet-name>salvaRecensioni</servlet-name>
+  	<url-pattern>/salvaRecensioni</url-pattern>
+ </servlet-mapping>
+  
+ <servlet>
+  	<servlet-name>elencoDaScaricare</servlet-name>
+  	<servlet-class>controller.EbookDaScaricare</servlet-class>
+</servlet> 
+<servlet-mapping>
+  	<servlet-name>elencoDaScaricare</servlet-name>
+  	<url-pattern>/carrello</url-pattern>
+</servlet-mapping>
+ 
+</web-app>

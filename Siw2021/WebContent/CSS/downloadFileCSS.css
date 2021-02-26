@@ -1,0 +1,111 @@
+@charset "ISO-8859-1";
+body{
+	background: rgb(255,255,255); 
+}
+
+.title{
+	text-align: center;
+}
+
+.form{
+	position: relative;
+	top: 50%;
+	right: 20%;
+	left: 27%;
+}
+
+h2{
+	font-family: "Kaushan Script", cursive;
+	font-size: 45px;
+}
+
+select,option{
+	font-family: "MS PMincho","Rockwell","Arial";
+}
+
+.search{
+	color: green;
+	border: none;
+	border-bottom: 2px solid green;
+}
+
+.searchC{
+	color: green;
+	border: none;
+	border-bottom: 2px solid green;
+}
+
+.btn{
+	background-color: green;
+	color: white;
+	padding: 12px; 
+ 	margin: 10px 0; 
+	position: relative;
+	top: 300px;
+	left: 5%;
+	bottom: 10%;
+	border: none;
+	width: 17%;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 17px;
+	font-family: "MS PMincho","Rockwell","Arial";
+}
+
+.btn:hover {
+	background-color: #d3d3d3;
+	 color:black
+}
+
+.rec{
+	color: green;
+	border: none;
+	border-bottom: 2px solid grenn;
+}
+#table{ 
+	position: relative;
+	top: 40%;
+	right: 25%; 
+	border-collapse: separate;
+	border-spacing: 20px;
+}
+
+th{
+	color: green;
+	font-size: 20px;
+	text-align: center;
+}
+td{
+	text-align: center;
+	font-size: 20px;
+/* 	width: 100px; */
+
+}
+
+.paragrafo{
+	width: 400px;
+	height: 30px;
+	resize: none;
+	outline:none;
+    border:none;
+    overflow:hidden;
+	font-size: 20px;
+	background:transparent;
+}
+.searchBar{
+	font-size: 18px;
+	width: 300px;
+}
+#ricerca{
+	display: flex;
+}
+.recensione{
+	width: 350px;
+	height: 100px;
+	resize:none;
+}
+.benvenuto{
+	float: right;
+	text-align: center;
+	font-size: 20px;
+}

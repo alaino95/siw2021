@@ -1,0 +1,55 @@
+@charset "ISO-8859-1";
+body{
+	background: rgb(255,255,255); 
+}
+
+.titleForm{
+	text-align: center;
+}
+
+.form{
+	position: relative;
+	top: 50%;
+	left: 35%;
+}
+
+h2{
+	font-family: "Kaushan Script","Gabriola","Arial", cursive;
+	font-size: 50px;
+}
+
+label{
+	font-size: 16px;
+}
+
+select,option{
+	font-family: "MS PMincho","Rockwell","Arial";
+}
+
+#carica{
+	font-family: "Helvetica","Rockwell","Arial";
+}
+
+textarea{
+	resize: none;
+	border: 1px solid;
+	border-color: black;
+	background-color: #00FFFF;
+	border-radius: 10px;
+}
+
+.Annulla{
+	color: black;
+	border: none;
+	border-bottom: 2px solid black;
+}
+
+.caricaE{
+	color: red;
+	border: none;
+	border-bottom: 2px solid red;
+}
+
+.obbligatorio{
+	display:none;
+}
