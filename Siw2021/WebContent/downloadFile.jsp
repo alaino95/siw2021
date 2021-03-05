@@ -25,6 +25,13 @@
 			</div>
 		</form>
 		<br>
+		<form action="ricercaAutore" method="post">
+			<div id="ricerca">
+				<input type="text" placeholder="Search.." class="searchBar" name="searchBar"> 
+				<input type="submit" value="Cerca per autore" class="search">
+			</div>
+		</form>
+		<br>
 		<form action="ebook" method="post">
 			<label>Casa editrice: </label> 
 			<select name="caseeditrici" id="caseeditrici">
@@ -50,6 +57,7 @@
 						<th>Prezzo in crediti</th>
 						<th>Prezzo in euro</th>
 						<th>Trama</th>
+						<th>Autore</th>
 					</c:if>
 					<c:forEach items="${ebooks}" var="ebook">
 						<tr>
@@ -58,6 +66,7 @@
 							<td>${ebook.prezzo_crediti} crediti</td>
 							<td>${ebook.prezzo} euro</td>
 							<td>${ebook.trama}</td>
+							<td>${ebook.autore}</td>
 							<td><input type="checkbox" class="${ebook.id}"
 								onclick="salvaDati('${ebook.prezzo}','${ebook.prezzo_crediti}','${ebook.id}')"></td>
 							<td><input type="button" value="Recensioni" class="rec"
@@ -75,6 +84,7 @@
 						<th>Prezzo in crediti</th>
 						<th>Prezzo in euro</th>
 						<th>Trama</th>
+						<th>Autore</th>
 					</c:if>
 
 					<c:forEach items="${trovati}" var="ebook">
@@ -84,6 +94,7 @@
 							<td>${ebook.prezzo_crediti} crediti</td>
 							<td>${ebook.prezzo} euro</td>
 							<td>${ebook.trama}</td>
+							<td>${ebook.autore}</td>
 							<td><input type="checkbox" class="${ebook.id}"
 								onclick="salvaDati('${ebook.prezzo}','${ebook.prezzo_crediti}','${ebook.id}')"></td>
 							<td><input type="button" value="Recensioni" class="rec"
@@ -98,9 +109,11 @@
 		<div id="totale">
 			<p class="paragrafo"></p>
 		</div>
-		<form action="pagacrediti" method="post" class="trasferisci">
-			<input type="submit" value="Paga con Crediti" class="btn">
-		</form>
+		<c:if test="${publisher!=null}">
+			<form action="pagacrediti" method="post" class="trasferisci">
+				<input type="submit" value="Paga con Crediti" class="btn">
+			</form>
+		</c:if>
 		<form action="trasferisci" method="post" class="trasferisci">
 			<button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">pagaConCarta</button>
 			<br>

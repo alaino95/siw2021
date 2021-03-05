@@ -50,6 +50,9 @@
 				</c:forEach>
 			</select> <br>
 			<br>
+			<label>Inserisci l'autore dell'ebook:</label> <br>
+			<textarea name="autore" cols=30 rows=5 required></textarea> <br>
+			<br> 
 			<label>Inserisci la trama dell'ebook:</label> <br>
 			<textarea name="trama" cols=30 rows=5 required></textarea> <br>
 			<br> 

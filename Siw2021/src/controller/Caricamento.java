@@ -28,6 +28,7 @@ public class Caricamento extends HttpServlet {
 			String casaEditrice = req.getParameter("caseeditrici");
 			String genere = req.getParameter("generi");
 			String trama = req.getParameter("trama");
+			String autore = req.getParameter("autore");
 			
 			CasaEditrice ce = new CasaEditrice();
 			ce.setNome(casaEditrice);
@@ -42,7 +43,7 @@ public class Caricamento extends HttpServlet {
 				String[] words = string.split(Pattern.quote("\\"));
 				String name = words[words.length - 1];
 				File dest = new File(
-						"C:\\Users\\alexf\\WebComputing\\Siw2021\\WebContent\\loadedFiles\\"+ name);
+						"C:\\Users\\alexf\\git\\siw2021\\Siw2021\\WebContent\\loadedFiles\\"+ name);
 				int pages = 0;
 				if (name.endsWith(".pdf")) {
 					try {
@@ -64,6 +65,7 @@ public class Caricamento extends HttpServlet {
 				ebook.setGenere(gen);
 				ebook.setCasaEditrice(ce);
 				ebook.setTrama(trama);
+				ebook.setAutore(autore);
 				ebook.setN_pagine(pages);
 				ebook.setPrezzo(gen.getPrezzo());
 				ebook.setPrezzo_crediti(gen.getPrezzo_crediti() * pages);

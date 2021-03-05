@@ -21,13 +21,13 @@
 	%>
 	
 	<section class="w3-container w3-center w3-content" style="max-width: 600px">
-		<h2 class="w3-wide ">EE</h2>
-		<h3 class="w3-opacity">EbookExchange</h3>
+		<h2 class="w3-wide ">EbookExchange</h2>
 		<p class="w3-opacity">
 			<i>I libri che vuoi, quando e dove vuoi.</i>
 		</p>
 		<p class="descrizione">Benvenuto su EbookExchange, dove è possibile trovare
-			tanti libri.
+			tanti libri, in formato pdf, pronti per essere scaricati e letti su 
+			qualsiasi dispositivo.
 		</p>
 	</section>
 	<section>

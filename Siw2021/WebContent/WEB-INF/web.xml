@@ -115,10 +115,18 @@
   	<servlet-name>ricercaPerNome</servlet-name>
   	<servlet-class>controller.DammiEbookPerNome</servlet-class>
 </servlet>
-  
 <servlet-mapping>
   	<servlet-name>ricercaPerNome</servlet-name>
   	<url-pattern>/ricercaNome</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  	<servlet-name>ricercaPerAutore</servlet-name>
+  	<servlet-class>controller.DammiEbookPerAutore</servlet-class>
+</servlet>
+<servlet-mapping>
+  	<servlet-name>ricercaPerAutore</servlet-name>
+  	<url-pattern>/ricercaAutore</url-pattern>
 </servlet-mapping>
 
 <servlet>

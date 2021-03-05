@@ -7,6 +7,7 @@ public class Ebook {
 	private int prezzo;
 	private int prezzo_crediti;
 	private Publisher publisher;
+	private String autore;
 	private String trama;
 	private Genere genere;
 	private CasaEditrice casaEditrice;
@@ -46,6 +47,12 @@ public class Ebook {
 	}
 	public void setPublisher(Publisher publisher) {
 		this.publisher = publisher;
+	}
+	public String getAutore() {
+		return autore;
+	}
+	public void setAutore(String autore) {
+		this.autore = autore;
 	}
 	public String getTrama() {
 		return trama;

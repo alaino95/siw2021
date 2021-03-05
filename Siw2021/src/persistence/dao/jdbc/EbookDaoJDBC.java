@@ -31,7 +31,7 @@ public class EbookDaoJDBC implements EbookDao {
 			Long id = IdBroker.getId(connection);
 			ebook.setId(id);
 			String insert = "insert into ebook(id,nome,n_pagine,prezzo,prezzo_crediti,trama,"
-					+ "id_nome_casa_editrice,id_tipo_genere,publisher) values (?,?,?,?,?,?,?,?,?)";
+					+ "id_nome_casa_editrice,id_tipo_genere,publisher,autore) values (?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement statement = connection.prepareStatement(insert);
 			statement.setLong(1, ebook.getId());
 			statement.setString(2, ebook.getNome());
@@ -42,6 +42,7 @@ public class EbookDaoJDBC implements EbookDao {
 			statement.setString(7, ebook.getCasaEditrice().getNome());
 			statement.setString(8, ebook.getGenere().getTipo());
 			statement.setString(9, ebook.getPublisher().getUsername());
+			statement.setString(10, ebook.getAutore());
 			statement.executeUpdate();
 
 		} catch (SQLException e) {
@@ -74,6 +75,7 @@ public class EbookDaoJDBC implements EbookDao {
 				ebook.setPrezzo(result.getInt("prezzo"));
 				ebook.setPrezzo_crediti(result.getInt("prezzo_crediti"));
 				ebook.setTrama(result.getString("trama"));
+				ebook.setAutore(result.getString("autore"));
 
 				CasaEditrice ce = DBManager.getInstance().getCasaEditriceDAO()
 						.findByPrimaryKey(result.getString("id_nome_casa_editrice"));
@@ -119,6 +121,7 @@ public class EbookDaoJDBC implements EbookDao {
 				ebook.setPrezzo(result.getInt("prezzo"));
 				ebook.setPrezzo_crediti(result.getInt("prezzo_crediti"));
 				ebook.setTrama(result.getString("trama"));
+				ebook.setAutore(result.getString("autore"));
 				
 				CasaEditrice ce = DBManager.getInstance().getCasaEditriceDAO()
 						.findByPrimaryKey(result.getString("id_nome_casa_editrice"));
@@ -153,7 +156,7 @@ public class EbookDaoJDBC implements EbookDao {
 		try {
 			connection = this.dataSource.getConnection();
 			String update = "update ebook SET nome = ?, n_pagine = ?, prezzo = ?, prezzo_crediti = ?, trama = ?, "
-					+ "id_nome_casa_editrice = ?,id_tipo_genere = ?,publisher = ? WHERE id=?";
+					+ "id_nome_casa_editrice = ?,id_tipo_genere = ?,publisher = ?,autore = ? WHERE id=?";
 			PreparedStatement statement = connection.prepareStatement(update);
 			statement.setString(1, ebook.getNome());
 			statement.setInt(2, ebook.getN_pagine());
@@ -230,6 +233,7 @@ public class EbookDaoJDBC implements EbookDao {
 				ebook.setPrezzo(result.getInt("prezzo"));
 				ebook.setPrezzo_crediti(result.getInt("prezzo_crediti"));
 				ebook.setTrama(result.getString("trama"));
+				ebook.setAutore(result.getString("autore"));
 				
 				CasaEditrice ce = DBManager.getInstance().getCasaEditriceDAO()
 						.findByPrimaryKey(result.getString("id_nome_casa_editrice"));

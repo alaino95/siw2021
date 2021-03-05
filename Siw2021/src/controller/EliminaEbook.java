@@ -29,7 +29,7 @@ public class EliminaEbook extends HttpServlet {
 			for (Ebook e : Ebook) {
 				if (e.getPublisher().getUsername().equals(p.getUsername())) {
 					daEliminare.add(e);
-					File f= new File("C:\\Users\\alexf\\WebComputing\\Siw2021\\WebContent\\loadedFiles\\"+e.getNome());
+					File f= new File("C:\\Users\\alexf\\git\\siw2021\\Siw2021\\WebContent\\loadedFiles\\"+e.getNome());
 					f.delete();
 					DBManager.getInstance().getEbookDAO().delete(e);
 				}
