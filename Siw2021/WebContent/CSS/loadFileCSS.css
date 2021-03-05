@@ -34,7 +34,7 @@ textarea{
 	resize: none;
 	border: 1px solid;
 	border-color: black;
-	background-color: #00FFFF;
+	background-color: rgb(255,255,255);
 	border-radius: 10px;
 }
 

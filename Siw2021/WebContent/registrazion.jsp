@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
+	<br> <br>
     <div id="reg">
     <div class="container">
         <div id="login-row" class="row justify-content-center align-items-center">
