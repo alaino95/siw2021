@@ -54,7 +54,7 @@ public class Pagamento extends HttpServlet {
 		//svuota carrello
 		req.getSession().setAttribute("prezzo", Integer.toString(0));
 		req.getSession().setAttribute("credito", Integer.toString(0));
-		String source = "C:\\Users\\alexf\\git\\siw2021\\Siw2021\\WebContent\\loadedFiles\\";
+		String source = "C:\\Users\\Alessandro Laino\\git\\siw2021\\Siw2021\\WebContent\\loadedFiles\\";
 		List<Ebook> daScaricare = (List<Ebook>) req.getSession().getAttribute("lista_ebook");
 
 		List<File> files = new ArrayList<File>();

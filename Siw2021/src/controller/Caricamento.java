@@ -43,7 +43,7 @@ public class Caricamento extends HttpServlet {
 				String[] words = string.split(Pattern.quote("\\"));
 				String name = words[words.length - 1];
 				File dest = new File(
-						"C:\\Users\\alexf\\git\\siw2021\\Siw2021\\WebContent\\loadedFiles\\"+ name);
+						"C:\\Users\\Alessandro Laino\\git\\siw2021\\Siw2021\\WebContent\\loadedFiles\\"+ name);
 				int pages = 0;
 				if (name.endsWith(".pdf")) {
 					try {

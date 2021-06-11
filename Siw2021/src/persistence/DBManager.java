@@ -32,7 +32,7 @@ public class DBManager {
 	static {
 		try {
 			Class.forName("org.postgresql.Driver").newInstance();
-			dataSource = new DataSource("jdbc:postgresql://localhost:5432/EbookExchange", "postgres", "pgAdmin4");
+			dataSource = new DataSource("jdbc:postgresql://localhost:5432/EbookExchange", "postgres", "root");
 		} catch (Exception e) {
 			System.err.println("PostgresDAOFactory.class: failed to load MySQL JDBC driver\n" + e);
 			e.printStackTrace();
