@@ -27,7 +27,7 @@ public class EliminaEbook extends HttpServlet {
 			List<Ebook> Ebook = DBManager.getInstance().getEbookDAO().findAll();
 			List<Ebook> daEliminare = new ArrayList<Ebook>();
 			for (Ebook e : Ebook) {
-				if (e.getPublisher().getUsername().equals(p.getUsername())) {
+				if (e.getPublisher().getUsername().equals(p.getUsername()) && e.getNome().contains(nomeEbook)) {
 					daEliminare.add(e);
 					File f= new File("C:\\Users\\Alessandro Laino\\git\\siw2021\\Siw2021\\WebContent\\loadedFiles\\"+e.getNome());
 					f.delete();
